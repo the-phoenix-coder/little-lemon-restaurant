@@ -219,6 +219,9 @@ main button:hover {
 #menu-container :where(h1, p, a) {
     padding-inline: 1rem;
 }
+#menu-container p {
+    max-width: 100%;
+}
 #menu-container a {
     text-decoration: none;
     color: var(--main-clr);
