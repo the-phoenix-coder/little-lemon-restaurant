@@ -12,6 +12,9 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+.active_link {
+  color: var(--rare-clr);
+}
 header {
   display: flex;
   align-items: center;
@@ -59,7 +62,7 @@ ul li:hover a {
   -ms-transition: color 0.3s ease-in;
   -o-transition: color 0.3s ease-in;
 }
-ul li svg {
+ul li i {
   display: none;
   width: 20px;
   height: 20px;
@@ -71,10 +74,10 @@ ul li svg {
     align-items: center;
     gap: 0.5rem;
   }
-  ul li svg {
+  ul li i {
     display: block;
   }
-  ul li:hover svg {
+  ul li:hover i {
     fill: var(--rare-clr);
     transition: fill 0.3s ease-in-out;
     -webkit-transition: fill 0.3s ease-in-out;
@@ -246,79 +249,32 @@ main button:hover {
     translate: 2px;
   }
 }
-
-#testemonial {
-  display: flex;
-  background-color: var(--main-clr);
-  padding: 5%;
-  gap: 1rem;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  height: 500px;
+/* Start Testimonial */
+#testimonial {
+  width: 600px;
+  height: 300px;
+  text-align: center;
 }
-#testemonial .review {
-  min-width: 250px;
-  background-color: white;
-  border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-  flex: 1;
-  padding: 1.8rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  display: none;
+#testimonial .rate i {
+  color: var(--first-clr);
 }
-#testemonial .review.active {
-  display: block;
+#testimonial p {
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+  margin-inline: auto;
 }
-#testemonial .person {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-#testemonial .review p {
-  max-width: 100%;
-}
-#testemonial .person .user-img svg {
-  width: 50px;
-  height: 50px;
+#testimonial .person .user-img {
+  width: 100px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  margin: 0 auto 1.5rem;
 }
-#testemonial .btns {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#testemonial .btns button {
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
-}
-#testemonial .btns button.disabled {
-  opacity: 0.4;
-  pointer-events: none;
-  user-select: none;
-}
-#testemonial .btns button svg {
-  width: 15px;
+#testimonial .person .testimonial_title {
+  font-size: var(--h2-font);
+  margin-bottom: 1.2rem;
 }
 /* End Testemonial */
 /* Start Footer */
@@ -343,12 +299,12 @@ footer > section:last-child {
   display: flex;
   gap: 1rem;
 }
-footer > section:last-child svg {
+footer > section:last-child i {
   width: 30px;
   height: 30px;
   fill: var(--main-clr);
 }
-footer > section:last-child svg:hover {
+footer > section:last-child i:hover {
   fill: var(--rare-clr);
   transition: fill 0.3s;
   -webkit-transition: fill 0.3s;
