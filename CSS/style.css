@@ -10,10 +10,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
 }
 .active_link {
   color: var(--rare-clr);
+}
+i {
+  font-size: 1.2rem;
+  color: var(--main-clr);
 }
 header {
   display: flex;
@@ -232,11 +238,7 @@ main button:hover {
   gap: 0.5rem;
   align-items: center;
 }
-#menu-container a svg {
-  width: 15px;
-  fill: var(--main-clr);
-}
-#menu-container a:hover svg {
+#menu-container a:hover i {
   animation: alternate translation 0.3s infinite;
   -webkit-animation: alternate translation 0.3s infinite;
 }
@@ -276,6 +278,11 @@ main button:hover {
   font-size: var(--h2-font);
   margin-bottom: 1.2rem;
 }
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: var(--main-clr);
+  font-size: 10rem;
+}
 /* End Testemonial */
 /* Start Footer */
 footer {
@@ -300,15 +307,9 @@ footer > section:last-child {
   gap: 1rem;
 }
 footer > section:last-child i {
-  width: 30px;
-  height: 30px;
-  fill: var(--main-clr);
+  font-size: 1.7rem;
+  color: var(--main-clr);
 }
 footer > section:last-child i:hover {
-  fill: var(--rare-clr);
-  transition: fill 0.3s;
-  -webkit-transition: fill 0.3s;
-  -moz-transition: fill 0.3s;
-  -ms-transition: fill 0.3s;
-  -o-transition: fill 0.3s;
+  text-shadow: 0 1px 1px var(--main-clr);
 }
