@@ -11,6 +11,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 a {
   text-decoration: none;
 }
@@ -26,7 +29,13 @@ header {
   align-items: center;
   justify-content: space-between;
   padding-inline: 5%;
-  margin-block: 0.5rem;
+  padding-block: .4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
 }
 @media (max-width: 40em) {
   header {
@@ -328,8 +337,8 @@ input, option {
   margin-block: 2rem;
 }
 /* End Reservation */
-/* Start Location */
-#location {
+/* Start contact */
+#contact {
   margin-block: 4rem;
   padding-block: 4rem;
   background-image: url(../imgs/pexels-naimbic-2290753\ \(1\).jpg);
@@ -339,7 +348,7 @@ input, option {
   color: white;
   z-index: 0;
 }
-#location::after {
+#contact::after {
   content: '';
   position: absolute;
   background-color: rgba(0, 0, 0, .7);
@@ -349,20 +358,20 @@ input, option {
   top: 0;
   z-index: -1;
 }
-#location h2 , #location > p {
+#contact h2 , #contact > p {
   margin-bottom: 2rem;
 }
-#location > *,
-#location > * > * > * {
+#contact > *,
+#contact > * > * > * {
   text-align: center;
   width: fit-content;
   margin-inline: auto;
 }
-#location a {
+#contact a {
   color: white;
   text-decoration: underline;
 }
-#location span {
+#contact span {
   font-weight: normal;
 }
 .location_info h4 {
@@ -370,7 +379,7 @@ input, option {
 }
 .location_info h4,.location_info p {
   font-size: .9rem;
-  margin-block: 1rem;
+  margin-block: 2rem;
 }
 .location_info h3 {
   margin: 3rem;
@@ -386,7 +395,7 @@ input, option {
     margin-bottom: 2rem;
   }
 }
-/* End Location */
+/* End contact */
 /* Start Footer */
 footer {
   display: flex;
